@@ -102,6 +102,7 @@ export default function Index() {
       <FlatList
         numColumns={2}
         columnWrapperStyle={{ justifyContent: "space-evenly" }}
+        ItemSeparatorComponent={() => <View style={{ height: 16 }} />}
         data={products}
         renderItem={({ item }) => <Card key={item} item={item} />}
         keyExtractor={(item) => item.id}
