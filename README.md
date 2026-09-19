@@ -64,6 +64,7 @@ Debounce: [duration, e.g. 400ms] and how [previous requests are cancelled or ign
 - asking AI for styling color
 - guide for component cannot scroll
 - asking opinion for UI layout for product description screen & generate styling for me
+- create UI component search bar 
 
 ## Testing
 
