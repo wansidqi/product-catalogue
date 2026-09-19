@@ -1,30 +1,24 @@
-import { Button, Text, View } from "react-native";
+import { Button, FlatList, Text, View } from "react-native";
 import Card from "./components/card";
-import {
-  useGetProductById,
-  useGetProducts,
-  useSearchProducts,
-} from "./services/product-service";
 import { Color } from "./constant/color";
+import { useGetProducts } from "./services/product-service";
 
 export default function Index() {
-  const { data, fetchNextPage } = useGetProducts();
-  const { data: product } = useGetProductById(1);
-  const { data: result } = useSearchProducts("phone");
-
-  console.log(product);
-  console.log(data);
-  console.log(result);
+  const { data, fetchNextPage, refetch } = useGetProducts();
 
   return (
-    <View className={`flex-1 items-center items justify-center ${Color.PAGE} text-slate-200`}>
-      <Text className="text-5xl font-bold text-blue-500 text-center">
+    <View className={`flex-1 ${Color.PAGE} text-slate-200`}>
+      <Text className="text-2xl font-bold text-blue-500 text-center">
         Product Catalog
       </Text>
-      <View className="my-20">
-        <Card />
-      </View>
-      <Button title="fetch next product" onPress={() => fetchNextPage()} />
+      <FlatList
+        numColumns={2}
+        columnWrapperStyle={{ justifyContent: "space-evenly" }}
+        data={data?.pages.map((page) => page.products).flat()}
+        renderItem={({ item }) => <Card key={item} item={item} />}
+        keyExtractor={(item) => item.id}
+        onEndReached={() => fetchNextPage()}
+      />
     </View>
   );
 }

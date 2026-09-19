@@ -62,6 +62,7 @@ Debounce: [duration, e.g. 400ms] and how [previous requests are cancelled or ign
 - design the template for README.md
 - guideline usage of tanstack library for infinite query fetch next page
 - asking AI for styling color
+- guide for component cannot scroll
 
 ## Testing
 
