@@ -17,7 +17,7 @@ export default function Index() {
   console.log(result);
 
   return (
-    <View className={`flex-1 items-center items justify-center text-slate-200`}>
+    <View className={`flex-1 items-center items justify-center ${Color.PAGE} text-slate-200`}>
       <Text className="text-5xl font-bold text-blue-500 text-center">
         Product Catalog
       </Text>

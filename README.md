@@ -61,6 +61,7 @@ Debounce: [duration, e.g. 400ms] and how [previous requests are cancelled or ign
 - use AI as guidance to setup nativewind for simplify styling
 - design the template for README.md
 - guideline usage of tanstack library for infinite query fetch next page
+- asking AI for styling color
 
 ## Testing
 
