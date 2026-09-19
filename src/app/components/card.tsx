@@ -1,8 +1,11 @@
 import { Image } from "expo-image";
 import { Link } from "expo-router";
 import { Text, View } from "react-native";
+import { cssInterop } from "nativewind";
 import { Color } from "../constant/color";
 import { ProductInterface } from "../interface/product-interface";
+
+cssInterop(Image, { className: "style" });
 
 export default function Card({ item }: { item: Partial<ProductInterface> }) {
   const blurhash =
@@ -10,7 +13,7 @@ export default function Card({ item }: { item: Partial<ProductInterface> }) {
   return (
     <Link href={`/${item.id}`}>
       <View
-        className={`w-40 border-2 border-transparent p-6 rounded-3xl ${Color.PAGE} flex items-center justify-center m-4`}
+        className={`w-40 p-6 ${Color.CARD} flex items-center justify-center m-4`}
       >
         <View>
           <Image
