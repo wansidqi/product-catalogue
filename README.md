@@ -63,6 +63,7 @@ Debounce: [duration, e.g. 400ms] and how [previous requests are cancelled or ign
 - guideline usage of tanstack library for infinite query fetch next page
 - asking AI for styling color
 - guide for component cannot scroll
+- asking opinion for UI layout for product description screen & generate styling for me
 
 ## Testing
 
